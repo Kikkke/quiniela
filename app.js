@@ -33,7 +33,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 // --- CREDENCIALES DE SOFASCORE ---
-const API_KEY = 'b21ca1f0c4msh95b3eab7f6e6923p15b91djsn01470d8a675a';
+const API_KEY = process.env.RAPIDAPI_KEY || 'b21ca1f0c4msh95b3eab7f6e6923p15b91djsn01470d8a675a';
 const API_HOST = 'sportapi7.p.rapidapi.com';
 
 // --- NUEVAS FUNCIONES DE LECTURA/ESCRITURA EN LA NUBE ---
@@ -78,7 +78,8 @@ async function consultarPartidosDeHoy() {
         let seleccionesActualizadas = 0;
 
         eventos.forEach(evento => {
-            if (historial.includes(evento.id)) return;
+            if (historial.includes(String(evento.id))) return;
+
 
             if (!evento.homeTeam || !evento.awayTeam) return;
             const local = evento.homeTeam.name;
@@ -116,7 +117,7 @@ async function consultarPartidosDeHoy() {
                         });
                     });
                 }
-                historial.push(evento.id);
+                historial.push(String(evento.id));
             }
         });
 
