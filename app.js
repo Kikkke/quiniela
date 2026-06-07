@@ -6,10 +6,13 @@ const axios = require('axios');
 const admin = require('firebase-admin');
 const path = require('path');
 
-// Carga el archivo de forma absoluta
-const serviceAccount = require(path.join(__dirname, 'firebase-key.json'));
+let serviceAccount;
+if (process.env.FIREBASE_KEY) {
+    serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
+} else {
+    serviceAccount = require(path.join(__dirname, 'firebase-key.json'));
+}
 
-// Inicializa explícitamente
 if (admin.apps.length === 0) {
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount)
