@@ -9,24 +9,24 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #000000; /* Negro puro */
-    color: #8b92a5; 
+    background-color: #000000;
+    color: #8b92a5;
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 40px 16px;
     line-height: 1.6;
 }
 
 /* =========================================
-   Contenedor Principal y Animaciones
+   Contenedor Principal
 ========================================= */
 .container {
-    background-color: #000000; /* Negro puro */
+    background-color: #000000;
     width: 100%;
     max-width: 950px;
-    padding: 40px;
+    padding: 36px 32px;
     border-radius: 16px;
-    border: 1px solid #1a1a1a; /* Borde sutil para separar el contenedor del fondo si la pantalla es muy grande */
+    border: 1px solid #1a1a1a;
     animation: fadeInUp 0.5s ease-out;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 /* =========================================
-   Cabecera y Botón
+   Cabecera
 ========================================= */
 header {
     text-align: center;
@@ -45,49 +45,63 @@ header {
 
 h1 {
     color: #ffffff;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
 }
 
 #estado-conexion {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 22px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.conectado { background-color: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.3); }
-.desconectado { background-color: rgba(231, 76, 60, 0.1); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.3); }
+.conectado {
+    background-color: rgba(46, 204, 113, 0.08);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
 
+.desconectado {
+    background-color: rgba(231, 76, 60, 0.08);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+/* =========================================
+   Botón Actualizar
+========================================= */
 .btn-refresh {
     background-color: #ffffff;
-    color: #000000; /* Texto negro sobre botón blanco */
+    color: #000000;
     border: none;
-    padding: 12px 28px;
-    font-size: 14px;
+    padding: 11px 24px;
+    font-size: 13px;
     font-weight: 700;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin: 0 auto;
+    gap: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    width: auto;
 }
 
 .btn-refresh:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
     background-color: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.12);
 }
 
 .btn-refresh:active {
@@ -104,104 +118,231 @@ h1 {
 }
 
 /* =========================================
-   Tablas Estilo "Tarjetas"
+   Secciones con Header de Línea
 ========================================= */
-.seccion-tabla { margin-bottom: 50px; }
+.seccion-tabla {
+    margin-bottom: 48px;
+}
 
-h2 { 
-    color: #ffffff; 
-    font-size: 18px; 
-    margin-bottom: 20px; 
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 11px;
     font-weight: 600;
-    border-left: 3px solid #ffffff;
-    padding-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #1a1a1a;
+}
+
+/* =========================================
+   Tablas
+========================================= */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0 8px; 
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    min-width: 320px;
 }
 
 th {
-    color: #6c7383; 
-    font-size: 11px;
+    color: #3a3a3a;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
     padding: 0 16px 8px 16px;
     text-align: left;
     border: none;
+    white-space: nowrap;
 }
 
 td {
-    padding: 18px 16px;
-    background-color: #080808; /* Ligeramente gris para que la tarjeta no se pierda en el negro puro */
-    color: #e2e4e9;
-    border-top: 1px solid #1a1a1a;
-    border-bottom: 1px solid #1a1a1a;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    padding: 16px 16px;
+    background-color: #0a0a0a;
+    color: #c8cad0;
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    font-size: 14px;
 }
 
-td:first-child { 
-    border-left: 1px solid #1a1a1a; 
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-}
-td:last-child { 
-    border-right: 1px solid #1a1a1a; 
-    border-top-right-radius: 10px; 
-    border-bottom-right-radius: 10px; 
+td:first-child {
+    border-left: 1px solid #111111;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-#tabla-posiciones th:nth-child(1), #tabla-posiciones th:nth-child(3),
-#tabla-posiciones td:nth-child(1), #tabla-posiciones td:nth-child(3) {
-    text-align: center;
+td:last-child {
+    border-right: 1px solid #111111;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 tbody tr:hover td {
-    background-color: #111111; 
-    border-color: #333333;
+    background-color: #111111;
+    border-color: #222222;
 }
-
-td strong { 
-    color: #ffffff; 
-    font-size: 18px; 
-    font-weight: 700;
-} 
 
 /* =========================================
-   Etiquetas de Equipos 
+   Tabla Posiciones — Columnas
 ========================================= */
-.equipo-badge {
-    display: inline-block;
-    padding: 8px 14px;
-    margin: 4px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: #111111;
-    color: #ffffff;
-    border: 1px solid #333333;
-    transition: all 0.2s ease;
+#tabla-posiciones th:nth-child(1),
+#tabla-posiciones td:nth-child(1),
+#tabla-posiciones th:nth-child(3),
+#tabla-posiciones td:nth-child(3) {
+    text-align: center;
 }
 
-/* Efecto de inversión de color al pasar el mouse */
+/* Posición con colores oro/plata/bronce */
+.rank-1 { color: #f5c842; font-size: 15px; }
+.rank-2 { color: #aaaaaa; font-size: 13px; font-weight: 600; }
+.rank-3 { color: #cd7f32; font-size: 13px; font-weight: 600; }
+.rank-other { color: #444444; font-size: 13px; font-weight: 600; }
+
+td .puntos-total {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+td .nombre-participante {
+    color: #e2e4e9;
+    font-size: 14px;
+}
+
+/* =========================================
+   Badges de Equipos
+========================================= */
+.equipo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: #0f0f0f;
+    color: #c8cad0;
+    border: 1px solid #1e1e1e;
+    transition: all 0.15s ease;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.equipo-badge::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2ecc71;
+    flex-shrink: 0;
+}
+
 .equipo-badge:hover {
     background-color: #ffffff;
     color: #000000;
+    border-color: #ffffff;
     transform: translateY(-1px);
 }
 
+.equipo-badge:hover::before {
+    background: #000000;
+}
+
 .equipo-eliminado {
-    display: inline-block;
-    padding: 8px 14px;
-    margin: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 11px;
+    margin: 3px;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     background-color: transparent;
-    color: #4a4f5c;
+    color: #2e2e2e;
     border: 1px dashed #1a1a1a;
     text-decoration: line-through;
     opacity: 0.5;
+    white-space: nowrap;
+}
+
+/* =========================================
+   Toast (reemplaza el alert)
+========================================= */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1a1a1a;
+    color: #e2e4e9;
+    border: 1px solid #2a2a2a;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: 9999;
+    white-space: nowrap;
+    max-width: 90vw;
+    text-align: center;
+}
+
+.toast-show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================
+   Responsivo — Móvil
+========================================= */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 24px 16px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .btn-refresh {
+        width: 100%;
+    }
+
+    td {
+        padding: 12px 12px;
+        font-size: 13px;
+    }
+
+    td .puntos-total {
+        font-size: 17px;
+    }
+
+    #tabla-equipos td:last-child {
+        padding: 10px 8px;
+    }
 }
