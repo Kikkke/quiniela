@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+
+# Credenciales y archivos secretos
+firebase-key.json
+.env
+
+# Archivos de sistema y logs
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Carpetas de despliegue o build
+dist/
+build/
