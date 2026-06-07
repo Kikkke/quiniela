@@ -1,0 +1,92 @@
+{
+  "participantes": [
+    {
+      "nombre": "César",
+      "equipos": [
+        { "nombre": "England", "puntos": 0, "eliminado": false },
+        { "nombre": "Croatia", "puntos": 0, "eliminado": false },
+        { "nombre": "Türkiye", "puntos": 0, "eliminado": false },
+        { "nombre": "Egypt", "puntos": 0, "eliminado": false },
+        { "nombre": "Iraq", "puntos": 0, "eliminado": false },
+        { "nombre": "Bosnia and Herzegovina", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Eri",
+      "equipos": [
+        { "nombre": "Portugal", "puntos": 0, "eliminado": false },
+        { "nombre": "USA", "puntos": 0, "eliminado": false },
+        { "nombre": "Austria", "puntos": 0, "eliminado": false },
+        { "nombre": "Paraguay", "puntos": 0, "eliminado": false },
+        { "nombre": "Uzbekistan", "puntos": 0, "eliminado": false },
+        { "nombre": "Cape Verde", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Apa",
+      "equipos": [
+        { "nombre": "Brazil", "puntos": 0, "eliminado": false },
+        { "nombre": "Mexico", "puntos": 0, "eliminado": false },
+        { "nombre": "Switzerland", "puntos": 0, "eliminado": false },
+        { "nombre": "Ivory Coast", "puntos": 0, "eliminado": false },
+        { "nombre": "Scotland", "puntos": 0, "eliminado": false },
+        { "nombre": "Jordan", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Chay",
+      "equipos": [
+        { "nombre": "France", "puntos": 0, "eliminado": false },
+        { "nombre": "Uruguay", "puntos": 0, "eliminado": false },
+        { "nombre": "Ecuador", "puntos": 0, "eliminado": false },
+        { "nombre": "Algeria", "puntos": 0, "eliminado": false },
+        { "nombre": "Qatar", "puntos": 0, "eliminado": false },
+        { "nombre": "Saudi Arabia", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Itziel",
+      "equipos": [
+        { "nombre": "Argentina", "puntos": 0, "eliminado": false },
+        { "nombre": "Senegal", "puntos": 0, "eliminado": false },
+        { "nombre": "Iran", "puntos": 0, "eliminado": false },
+        { "nombre": "Canada", "puntos": 0, "eliminado": false },
+        { "nombre": "South Africa", "puntos": 0, "eliminado": false },
+        { "nombre": "Haiti", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Bere",
+      "equipos": [
+        { "nombre": "Morocco", "puntos": 0, "eliminado": false },
+        { "nombre": "Belgium", "puntos": 0, "eliminado": false },
+        { "nombre": "South Korea", "puntos": 0, "eliminado": false },
+        { "nombre": "Norway", "puntos": 0, "eliminado": false },
+        { "nombre": "DR Congo", "puntos": 0, "eliminado": false },
+        { "nombre": "New Zealand", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Kike",
+      "equipos": [
+        { "nombre": "Netherlands", "puntos": 0, "eliminado": false },
+        { "nombre": "Germany", "puntos": 0, "eliminado": false },
+        { "nombre": "Japan", "puntos": 0, "eliminado": false },
+        { "nombre": "Panama", "puntos": 0, "eliminado": false },
+        { "nombre": "Tunisia", "puntos": 0, "eliminado": false },
+        { "nombre": "Ghana", "puntos": 0, "eliminado": false }
+      ]
+    },
+    {
+      "nombre": "Juan",
+      "equipos": [
+        { "nombre": "Spain", "puntos": 0, "eliminado": false },
+        { "nombre": "Colombia", "puntos": 0, "eliminado": false },
+        { "nombre": "Australia", "puntos": 0, "eliminado": false },
+        { "nombre": "Sweden", "puntos": 0, "eliminado": false },
+        { "nombre": "Czech Republic", "puntos": 0, "eliminado": false },
+        { "nombre": "Curacao", "puntos": 0, "eliminado": false }
+      ]
+    }
+  ]
+}
