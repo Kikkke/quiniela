@@ -8,7 +8,8 @@ const path = require('path');
 
 let serviceAccount;
 if (process.env.FIREBASE_KEY) {
-    serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
+    const keyString = process.env.FIREBASE_KEY.replace(/\\n/g, '\n');
+    serviceAccount = JSON.parse(keyString);
 } else {
     serviceAccount = require(path.join(__dirname, 'firebase-key.json'));
 }
