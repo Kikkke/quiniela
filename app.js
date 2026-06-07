@@ -2,14 +2,23 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const axios = require('axios');
-const admin = require('firebase-admin');
 
-// --- CONEXIÓN A FIREBASE ---
-const serviceAccount = require('./firebase-key.json'); 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+const admin = require('firebase-admin');
+const path = require('path');
+
+// Carga el archivo de forma absoluta
+const serviceAccount = require(path.join(__dirname, 'firebase-key.json'));
+
+// Inicializa explícitamente
+if (admin.apps.length === 0) {
+    admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+    });
+}
+
 const db = admin.firestore();
+console.log("✅ Firebase inicializado correctamente.");
+
 
 const app = express();
 const server = http.createServer(app);
@@ -145,5 +154,5 @@ io.on('connection', async (socket) => {
 });
 
 // Render y Heroku te inyectan el puerto por defecto, por eso agregamos process.env.PORT
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 server.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
